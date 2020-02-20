@@ -80,6 +80,7 @@ public class JavaToProto {
 		
 		if(args.length == 0){
 			System.out.println("Usage: \n\tjava -jar JavaToProto.jar JavaToProto <class name> [<output file name>]\n");
+			System.exit(-1);
 		}
 		
 		Class clazz;
@@ -204,9 +205,9 @@ public class JavaToProto {
 	
 	private String buildMessage(){
 		
-		if(currentClass().isInterface() || currentClass().isEnum() || Modifier.isAbstract(currentClass().getModifiers())){
-			throw new RuntimeException("A Message cannot be an Interface, Abstract OR an Enum");
-		}
+		//if(currentClass().isInterface() || currentClass().isEnum() || Modifier.isAbstract(currentClass().getModifiers())){
+		//	throw new RuntimeException("A Message cannot be an Interface, Abstract OR an Enum");
+		//}
 		
 		String messageName = currentClass().getSimpleName();
 		
@@ -233,11 +234,11 @@ public class JavaToProto {
 		for(Field f : fields){
 			i++;
 			
-			int mod = f.getModifiers();
-			if(Modifier.isAbstract(mod) || Modifier.isTransient(mod)){
+			//int mod = f.getModifiers();
+			//if(Modifier.isAbstract(mod) || Modifier.isTransient(mod)){
 				//Skip this field
-				continue;
-			}
+			//	continue;
+			//}
 			
 			Class fieldType = f.getType();
 			
