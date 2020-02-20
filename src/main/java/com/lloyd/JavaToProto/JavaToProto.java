@@ -80,6 +80,7 @@ public class JavaToProto {
 		
 		if(args.length == 0){
 			System.out.println("Usage: \n\tjava -jar JavaToProto.jar JavaToProto <class name> [<output file name>]\n");
+			System.exit(-1);
 		}
 		
 		Class clazz;
