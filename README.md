@@ -22,7 +22,7 @@ This class simply takes a POJO and creates the associated Proto Buffer Specifica
 
 Usage - CLI:
 
-		java -jar JavaToProto.jar JavaToProto <class name> [<output file name>]
+		java -cp <JAR PATH CONTAINING THE CLAS>:JavaToProro.jar com.lloyd.JavaToProto.JavaToProto <class name> [<output file name>]
  
  		If output file name is not specified the output will be to the console.
  
@@ -30,7 +30,7 @@ Usage - CLI:
  
 Usage - Code:
  		
-		JavaToProto jpt = new JavaToProto(class name);
+		JavaToProto jpt = new JavaToProto(Fully qualified class name);
 		String protoFile = jpt.toString();	
 
 
