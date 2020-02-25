@@ -65,8 +65,8 @@ public class GenerateProto
 			}
 			sc.close();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		      // TODO Auto-generated catch block
+		      e.printStackTrace();
 		}
     }
 }
