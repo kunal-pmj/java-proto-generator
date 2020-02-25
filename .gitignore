@@ -6,4 +6,11 @@
 *.DS_Store
 *.swp
 *.out
+classList.txt
+failedCLasses.txt
+failed_classes_vim25.txt
+list_of_bindings_classes.txt
+list_of_bindings_classes_vim25.txt
+/protodir/
+/protodir_vim25/
 /target/
